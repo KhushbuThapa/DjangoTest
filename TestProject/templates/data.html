@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <h2>You have following information inserted</h2>
+    {% if names %}
+        {% for name in names %}
+            <p>Fullname: {{ name.fullname }}, Email: {{ name.email }}, Address: {{ name.address }}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+
+</body>
+</html>

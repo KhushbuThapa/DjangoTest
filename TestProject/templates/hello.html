@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/app.css' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<h2>Login</h2>
+<div>
+    <form method="POST" class="login-form" action="{% url 'saveToDb' %}">
+        {% csrf_token %}
+        <input type="text" class="login-halign login-rounded-corners" name="fullname"
+               placeholder="Fullname"
+               value="">
+        <input type="email" class="login-halign login-rounded-corners" name="email"
+               placeholder="Email" value="">
+        <input type="text" class="login-halign login-rounded-corners" name="address"
+               placeholder="Address" value="">
+        <button type="submit" class="save btn btn-default">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
